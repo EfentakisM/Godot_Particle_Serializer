@@ -26,10 +26,10 @@ func _serialize(var particleObject):
 				"Scale":pm.scale,"Scale_Random": pm.scale_random, "Scale_Curve":pm.scale_curve,"Color":pm.color,"Color_Ramp":pm.color_ramp,"Hue_Variation":pm.hue_variation,"Hue_Variation_Random":pm.hue_variation_random,"Hue_Variation_Curve":pm.hue_variation_curve,
 				"Animation_Speed":pm.anim_speed,"Animation_Speed_Random":pm.anim_speed_random,"Animation_Speed_Curve": pm.anim_speed_curve,"Animation_Offset": pm.anim_offset,"Animation_Offset_Random":pm.anim_offset_random,"Animation_Offset_Curve":pm.anim_offset_curve}}
 	
-	var save_game = File.new()
-	save_game.open("res://Particle_JSONS/Particle_1.part", File.WRITE)
-	save_game.store_line(to_json(partDict))
-	save_game.close()
+	var file = File.new()
+	file.open("res://Particle_JSONS/Particle_1.part", File.WRITE)
+	file.store_line(to_json(partDict))
+	file.close()
 	
 	
 	
