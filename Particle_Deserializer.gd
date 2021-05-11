@@ -23,12 +23,12 @@ func _deserialize(var fileName) -> Particles2D:
 	
 	var process = dict["Process_Material"]
 	
-	for k in dict:
-		if dict[k] as String == "[Object:null]":
-			dict[k] = null
-	for kk in process:
-		if process[kk] as String == "[Object:null]":
-			process[kk] = null
+	for key in dict:
+		if dict[key] as String == "[Object:null]":
+			dict[key] = null
+	for key in process:
+		if process[key] as String == "[Object:null]":
+			process[key] = null
 	
 	
 	particleObject.emitting= dict["Emitting"]
